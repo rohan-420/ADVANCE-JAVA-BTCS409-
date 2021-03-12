@@ -1,0 +1,27 @@
+public class JButtonBorder {
+
+	JFrame f = new JFrame();
+	JButtonBorder() {
+		JButton B1 =new JButton("North Button");
+		JButton B2 =new JButton("South Button");
+		JButton B3 =new JButton("East Button");
+		JButton B4 =new JButton("West Button");
+	    JButton B5 =new JButton("Center Button");
+		
+		f.add(B1,BorderLayout.NORTH);
+		f.add(B2,BorderLayout.SOUTH);
+		f.add(B3,BorderLayout.EAST);
+		f.add(B4,BorderLayout.WEST);
+		f.add(B5,BorderLayout.CENTER);
+	
+		f.setSize(400,450);
+		f.setVisible(true);
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        new JButtonBorder();
+	}
+
+}
