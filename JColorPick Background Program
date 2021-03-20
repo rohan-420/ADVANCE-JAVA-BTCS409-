@@ -1,0 +1,43 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+
+public  class JColorPickExample extends JFrame implements ActionListener
+{
+	
+	JButton b;
+	Container c1;
+	JColorPickExample()
+	{
+		c1= getContentPane();
+		c1.setLayout(new FlowLayout());
+		
+		b= new JButton("Select Color");
+		c1.add(b);
+		b.addActionListener(this);
+		
+	}
+	
+public void actionPerformed(ActionEvent e)
+{
+	Color selectedcolor= null;
+	Color color=JColorChooser.showDialog(this,"Select the Color",selectedcolor);
+	if (color!=null)
+	{
+		selectedcolor =color;
+		
+    }
+	
+	c1.setBackground(color);
+}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+      JColorPickExample obj =new JColorPickExample();
+obj.setTitle("to change color");
+obj.setSize(400,400);
+obj.setVisible(true);
+	}
+
+}
