@@ -1,0 +1,43 @@
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.tree.DefaultMutableTreeNode;
+
+public class JTreeEx extends JFrame 
+{
+	JTreeEx()
+	{
+
+	JFrame f = new JFrame("JTree");
+	f.setLayout(new FlowLayout());
+	
+	DefaultMutableTreeNode Coll=  new  DefaultMutableTreeNode("SVVV");
+    DefaultMutableTreeNode as   =  new  DefaultMutableTreeNode("SVIIT");
+	DefaultMutableTreeNode en =  new  DefaultMutableTreeNode("Computer Science Engineering");
+
+    DefaultMutableTreeNode ba   =  new  DefaultMutableTreeNode("Information Technology");
+    DefaultMutableTreeNode bs  =  new  DefaultMutableTreeNode("Artificial Intelligence");
+    DefaultMutableTreeNode bc =  new  DefaultMutableTreeNode("SVIEE");
+    DefaultMutableTreeNode be  =  new  DefaultMutableTreeNode("Elecrical Engineering");
+    DefaultMutableTreeNode bt  =  new  DefaultMutableTreeNode("Mechatronics Branch");
+    
+    
+    JTree t1 = new JTree(Coll); 
+    as.add(en);  as.add(ba); as.add(bs);
+    bc.add(be); bc.add(bt);
+    Coll.add(as); Coll.add(bc);
+    f.add(t1);
+    t1.setRowHeight(50);
+    System.out.println("Click:" +t1.getRowHeight());
+    
+    f.setSize(400,700);
+    f.setVisible(true);
+    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+          new JTreeEx();
+	}
+
+}
